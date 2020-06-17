@@ -19,7 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/insert', 'mahasiswa@insert');
-Route::get('/view', 'mahasiswa@read');
-Route::get('/edit', 'mahasiswa@update');
-Route::get('/apus', 'mahasiswa@delete');
+//query builder
+// Route::get('/insert', 'mahasiswa@insert');
+// Route::get('/view', 'mahasiswa@read');
+// Route::get('/edit', 'mahasiswa@update');
+// Route::get('/apus', 'mahasiswa@delete');
+
+//eloqouent
+Route::get('/create', 'dosenController@create');
+Route::get('/lihat/{slug}', 'dosenController@show');
